@@ -1,7 +1,9 @@
 package br.com.aposentabilidade.controller;
 
 import java.util.Map;
+import java.util.List;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestParam;
 import br.com.aposentabilidade.service.AvaliacaoService;
@@ -17,8 +19,13 @@ public class AvaliacaoController {
         this.service = service;
     }
     
-     @GetMapping("/api/avaliacao")
+     @PostMapping("/api/avaliacoes")
     public Avaliacao avaliar(@RequestParam int idade) {
         return service.avaliar(idade);
     }
+    @GetMapping ("/api/avaliacoes")
+    public List<Avaliacao> listar(){
+        return service.listar();
+    }
+
 }

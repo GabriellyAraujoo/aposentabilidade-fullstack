@@ -16,4 +16,9 @@ AvaliacaoService service = new AvaliacaoService(null);
     void naoPodeAposentarCom40Anos(){
         assertFalse(service.podeAposentar( 40));
     }
+
+    @Test 
+    void podeAposentarCom65Anos(){
+        assertTrue(service.podeAposentar(65));
+    }
 }

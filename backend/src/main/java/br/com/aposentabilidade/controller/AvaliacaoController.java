@@ -7,8 +7,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestParam;
 import br.com.aposentabilidade.service.AvaliacaoService;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import br.com.aposentabilidade.model.Avaliacao;
 
+@CrossOrigin(origins = "http://localhost:4200")
 
 @RestController 
 public class AvaliacaoController {

@@ -1,0 +1,11 @@
+<h1>{{ title() }}</h1>
+<p>Bem-vindo à aplicação de avaliação de aposentadoria!</p>
+<p>Autora: {{ autora() }}</p> 
+<p>Total de avaliações: {{ avaliacoes().length }}</p>
+<ul>
+  @for (avaliacao of avaliacoes(); track avaliacao.id) {
+    <li>
+      {{avaliacao.idade}}
+    </li>
+  }
+</ul>

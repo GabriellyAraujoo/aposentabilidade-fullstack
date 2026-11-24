@@ -5,7 +5,12 @@
 <ul>
   @for (avaliacao of avaliacoes(); track avaliacao.id) {
     <li>
-      {{avaliacao.idade}}
+      Idade: {{ avaliacao.idade }} —
+      @if (avaliacao.podeAposentar) {
+        <span>Pode se aposentar</span>
+      } @else {
+        <span>Não pode se aposentar</span>
+      }
     </li>
   }
 </ul>

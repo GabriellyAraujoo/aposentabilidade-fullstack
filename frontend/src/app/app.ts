@@ -25,5 +25,10 @@ export class App {
     this.http.get<Avaliacao[]>('http://localhost:8080/api/avaliacoes')
       .subscribe(lista => this.avaliacoes.set(lista));
   }
+avaliar(valor: string) {
+    const idade = Number(valor);
+    this.http.post<Avaliacao>(`http://localhost:8080/api/avaliacoes?idade=`+ idade, null)
+      .subscribe(nova => this.avaliacoes.update(lista => [...lista, nova]));
+  }
   }
 

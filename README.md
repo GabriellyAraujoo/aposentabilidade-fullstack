@@ -93,7 +93,6 @@ Pronto:
 
 Próximos passos:
 
-- Formulário no front-end para criar uma avaliação
 - Validação dos dados de entrada
 - Autenticação com Spring Security
 - Testes com Mockito
